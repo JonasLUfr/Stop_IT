@@ -65,7 +65,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Script\Waypoints.cs" />
-    <Compile Include="Assets\Script\EnemyController2.cs" />
     <Compile Include="Assets\Script\GameMenu.cs" />
     <Compile Include="Assets\Script\EnemyController.cs" />
     <Compile Include="Assets\Script\BuildManager.cs" />

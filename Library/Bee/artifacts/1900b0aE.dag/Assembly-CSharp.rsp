@@ -356,7 +356,6 @@
 "Assets/Script/BuildManager.cs"
 "Assets/Script/Bullet.cs"
 "Assets/Script/EnemyController.cs"
-"Assets/Script/EnemyController2.cs"
 "Assets/Script/EnemySpawner.cs"
 "Assets/Script/EnemyWave.cs"
 "Assets/Script/GameManager.cs"

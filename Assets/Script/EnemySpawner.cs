@@ -16,14 +16,17 @@ public class EnemySpawner : MonoBehaviour
     public static int CountEnemyAlive = 0;
 
 
-    private Coroutine coroutine;
+   //private Coroutine coroutine;
     //Commence génèrer des ennemis
     void Start()
     {
-        coroutine = StartCoroutine(SpawnEnemy());
+        //coroutine = StartCoroutine(SpawnEnemy());
+        StartCoroutine("SpawnEnemy");
+
     }
     public void Stop() { 
-        StopCoroutine(coroutine);
+        //StopCoroutine(coroutine);
+        StopCoroutine("SpawnEnemy");
     }
     //Génère des ennemis avec boucle
     IEnumerator SpawnEnemy()

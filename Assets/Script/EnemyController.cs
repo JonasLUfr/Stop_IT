@@ -62,11 +62,14 @@ public class EnemyController : MonoBehaviour
         GameObject.Destroy(this.gameObject);
 
     }
-
+    
+    //Appeler automatiquement apres Destroy() dans die()
+    /*
     void OnDestroy(){
         //Lorsqu'un ennemi meurt, décrémentez la variable EnemySpawner pour réduire le nombre d'ennemis présents !
         EnemySpawner.CountEnemyAlive--;
     }
+    */
 
 
 
@@ -86,6 +89,8 @@ public class EnemyController : MonoBehaviour
         //Instancier les Effect
         GameObject effect = GameObject.Instantiate(explosionEffect,transform.position,transform.rotation);
         Destroy(effect,0.7f); //attention il faut superier 0.8s au moins car effect duree 0.6s
+        //OnDestroy();
+        EnemySpawner.CountEnemyAlive--;
         Destroy(this.gameObject);
     }
 }

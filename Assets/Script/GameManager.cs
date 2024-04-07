@@ -11,6 +11,7 @@ public class GameManager : MonoBehaviour
     public Text endMessage;
     public static GameManager instance;
     private EnemySpawner enemySpawner;
+    private bool MenuOn  = false;
 
     void Awake()
     {
@@ -18,27 +19,34 @@ public class GameManager : MonoBehaviour
         enemySpawner = GetComponent<EnemySpawner>();
     }
     public void Win()
-    { 
-        endUI.SetActive(true);
-        endMessage.text = "Victoire";
+    {   
+        if(!MenuOn){
+            endUI.SetActive(true);
+            endMessage.text = "Victoire";
+        }
+        MenuOn = true;
     }
 
     public void Failed()
-    {
-        enemySpawner.Stop();
-        endUI.SetActive(true);
-        endMessage.text = "Echouer";
-
+    {   
+        if(!MenuOn){
+            enemySpawner.Stop();
+            endUI.SetActive(true);
+            endMessage.text = "Echouer";
+        }
+        MenuOn = true;
     }
 
 
     public void OnButtonRetry()
     {
+        MenuOn = false;
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);//obtenir la scene actuelle et reload
     }
 
     public void OnButtonMenu()
     {
+        MenuOn = false;
         SceneManager.LoadScene(0);
     }
 }
