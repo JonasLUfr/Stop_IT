@@ -25,12 +25,18 @@ Ce dossier contient un fichier exécutable Stop_IT.exe permettant d'executer le 
 - Remarque : l'installation et la mise à niveau de chaque tourelle coûtent de l'argent. Donc veuillez choisir avec prudence le nombre et l'emplacement des tourelles !
 
 ## Contrôles&Tutoriels
-
 - Utilisez la molette de la souris pour contrôler la hauteur du point de vue.
 - Utilisez les touches w, a, s, d du clavier pour contrôler la vue vers le haut, le bas, la gauche et la droite pour vous déplacer.
 - Cliquez sur les carrés blancs de la carte pour placer les tourelles.
 - En cliquant à nouveau sur une tourelle déja installée, il est possible de la détruire et de l'améliorer.
 
-## Licence
 
+## Codes ou debug
+- Tout le code est téléchargé sur GitHub : https://github.com/JonasLUfr/Stop_IT
+- Mais pour déboguer le code, vous devez utiliser le moteur Unity.
+- Cliquez ici pour télécharger le moteur Unity : https://unity.com/fr/download
+- Importez ensuite l'ensemble de notre code.
+- Ou contactez l'auteur à l'adresse runnian.lu@etu.univ-lyon1.fr ou Yifan Xiang@etu.univ-lyon1.fr pour ils vous ajouteront à l'équipe de développement.
+
+## Licence
 Ce projet est sous licence Runnian LU et Yifan Xiang.
