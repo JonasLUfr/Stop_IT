@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq.Expressions;
+using UnityEditor;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -17,6 +18,8 @@ public class EnemyController : MonoBehaviour
     //pour le UI Slider de Hp
     public Slider hpSlider;
     private float totalHP;
+
+    private bool isDead = false;
 
     //Commencer par le indice 0 dans le tab de positions
     private int index = 0;  
@@ -64,14 +67,11 @@ public class EnemyController : MonoBehaviour
     }
     
     //Appeler automatiquement apres Destroy() dans die()
-    /*
-    void OnDestroy(){
+    //void OnDestroy(){
         //Lorsqu'un ennemi meurt, décrémentez la variable EnemySpawner pour réduire le nombre d'ennemis présents !
-        EnemySpawner.CountEnemyAlive--;
-    }
-    */
-
-
+        //EnemySpawner.CountEnemyAlive--;
+    //}
+    
 
     //pour Bullet.cs
     public void TakeDamage(float damage) //not int anymore!
@@ -79,17 +79,17 @@ public class EnemyController : MonoBehaviour
         if (hp <= 0) return;
         hp -= damage;
         hpSlider.value = (float)hp/totalHP;
-        if(hp <= 0)
+        if(hp <= 0 && !isDead)
         {
             Die();
         }
     }
     void Die()
     {
+        isDead = true;
         //Instancier les Effect
-        GameObject effect = GameObject.Instantiate(explosionEffect,transform.position,transform.rotation);
+        GameObject effect = (GameObject)Instantiate(explosionEffect,transform.position,transform.rotation);
         Destroy(effect,0.7f); //attention il faut superier 0.8s au moins car effect duree 0.6s
-        //OnDestroy();
         EnemySpawner.CountEnemyAlive--;
         Destroy(this.gameObject);
     }

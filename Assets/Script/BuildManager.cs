@@ -22,7 +22,7 @@ public class BuildManager : MonoBehaviour
     public Text moneyText;
     public Animator moneyAnimator;
 
-    private int money = 1000;
+    private int money = 1500;
     public GameObject upgradeCanvas;
 
     private Animator upgradeCanvasAnimator;

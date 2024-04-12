@@ -63,7 +63,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 0df80bfed456390489d01c4558ecf3b1, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -119,5 +119,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   turretGo: {fileID: 0}
+  turretData:
+    turretPrefab: {fileID: 0}
+    cost: 0
+    turretUpgradedPrefab: {fileID: 0}
+    costUpgraded: 0
+    type: 0
   isUpgraded: 0
   buildEffect: {fileID: 5674638109112760673, guid: 920b45826da4ccb45a0546fb68ecc5a5, type: 3}
