@@ -8,6 +8,7 @@ Voir la page du cours 2023/2024 Printemps :  http://cazabetremy.fr/wiki/doku.php
 Ce dossier contient un fichier exécutable Stop_IT.exe permettant d'executer le jeu-vidéo.
 
 ## Utilisation sur toutes OS
+- Cliquez ici pour télécharger le jeu complet: https://drive.google.com/file/d/1i1pFopLjs52Y9AIESPTx3ecAoZfagU_D/view?usp=sharing
 
  ### Sous Linux
  - Ce système ne supporte pas actuellement . 
