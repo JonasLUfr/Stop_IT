@@ -31,13 +31,50 @@ Ce dossier contient un fichier exécutable Stop_IT.exe permettant d'executer le 
 - Cliquez sur les carrés blancs de la carte pour placer les tourelles.
 - En cliquant à nouveau sur une tourelle déja installée, il est possible de la détruire et de l'améliorer.
 
-
 ## Codes ou debug
 - Tout le code est téléchargé sur GitHub : https://github.com/JonasLUfr/Stop_IT
 - Mais pour déboguer le code, vous devez utiliser le moteur Unity.
 - Cliquez ici pour télécharger le moteur Unity : https://unity.com/fr/download
 - Importez ensuite l'ensemble de notre code.
-- Ou contactez l'auteur à l'adresse runnian.lu@etu.univ-lyon1.fr ou Yifan Xiang@etu.univ-lyon1.fr pour ils vous ajouteront à l'équipe de développement.
+- Ou contactez l'auteur à l'adresse runnian.lu@etu.univ-lyon1.fr ou Yifan.Xiang@etu.univ-lyon1.fr pour ils vous ajouteront à l'équipe de développement.
+
+## Les principes pour chaque script
+Les fichiers de code de script du jeu se trouvent à l'adresse PATH : Assets/script
+- BuildManager:
+Ce gestionnaire est au cœur du jeu de défense de tour, gérant l'interaction entre les joueurs et le monde du jeu, ainsi que la gestion des ressources du jeu et des objets du jeu.
+
+- GameManager:
+Ce script permet donc de gérer les conditions de victoire et d'échec du jeu, ainsi que les transitions entre les différentes phases du jeu (rejouer, revenir au menu principal).
+
+- GameMenu:
+Ce script est utilisé pour contrôler les actions de départ et de sortie du jeu depuis un menu principal.
+
+- MapCube:
+ce script gère la construction, l'amélioration et la destruction de tourelles sur les cubes de la carte, ainsi que le changement de couleur visuel des cubes lorsque la souris entre et sort de leur zone.
+
+- ViewController:
+Ce script permet donc au joueur de déplacer la caméra dans le jeu en utilisant les touches du clavier et la molette de la souris.
+
+- WayPoints:
+Ce script permet donc de centraliser et de stocker les positions des points de passage dans un chemin, ce qui est utile pour les systèmes de déplacement des ennemis, par exemple, dans un jeu de défense de tour. Les autres scripts peuvent accéder à ce tableau statique pour obtenir les positions des waypoints sans avoir à rechercher les objets individuels dans la scène.
+
+- EnemyController:
+ce script gère le mouvement, la vie et la destruction des ennemis dans le jeu, ainsi que la gestion des effets visuels et du compteur d'ennemis vivants.
+
+- EnemySpawner:
+ ce script gère la génération des vagues d'ennemis dans le jeu, en attendant que tous les ennemis d'une vague soient détruits avant de passer à la vague suivante, et en déclenchant la victoire du joueur une fois que toutes les vagues ont été vaincues.
+
+- EnemyWave:
+ Cette classe est utilisée par le script "EnemySpawner" pour définir les différentes vagues d'ennemis à générer dans le jeu. Chaque instance de cette classe représente une vague d'ennemis avec ses propres caractéristiques, telles que le type d'ennemi, le nombre et la fréquence de génération
+
+- Turret:
+ Ce script permet donc de créer des tourelles qui peuvent détecter et attaquer les ennemis à portée, offrant ainsi une mécanique de jeu intéressante dans un jeu de défense de tour.
+
+- TurretData:
+ Cette classe est utilisée par d'autres scripts, tels que le gestionnaire de construction de tourelles, pour accéder aux informations sur chaque type de tourelle, ce qui facilite la configuration et la gestion des tourelles dans le jeu.
+- Bullets:
+Ce script est utilisé par les tourelles pour tirer des projectiles sur les ennemis détectés, ce qui contribue à la mécanique de combat du jeu.
+
 
 ## Licence
 Ce projet est sous licence Runnian LU et Yifan Xiang.
