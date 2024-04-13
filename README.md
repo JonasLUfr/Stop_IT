@@ -9,6 +9,7 @@ Ce dossier contient un fichier exécutable Stop_IT.exe permettant d'executer le 
 
 ## Utilisation sur toutes OS
 - Cliquez ici pour télécharger le jeu complet: https://drive.google.com/file/d/1i1pFopLjs52Y9AIESPTx3ecAoZfagU_D/view?usp=sharing
+- Cliquez ici pour voir le demo-video: https://drive.google.com/file/d/1-RzR0tMRhdlzQXq8LtSYb8nhlcnAYr7V/view?usp=sharing
 
  ### Sous Linux
  - Ce système ne supporte pas actuellement . 
